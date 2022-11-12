@@ -24,6 +24,7 @@ class Menu:
         options = ""
         for item in self.menu:
             options += f"{item.name}/"
+        print(options)
         return options
 
     def find_drink(self, order_name):
@@ -31,4 +32,10 @@ class Menu:
         for item in self.menu:
             if item.name == order_name:
                 return item
+        print("Sorry that item is not available.")
+
+    def get_cost(self, order_name):
+        for item in self.menu:
+            if item.name == order_name:
+                return item.cost
         print("Sorry that item is not available.")
